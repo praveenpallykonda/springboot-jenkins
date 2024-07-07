@@ -20,7 +20,7 @@ public class EmployeeController {
 
     @PostMapping
     public ResponseEntity<EmployeeDto> saveEmployee(@RequestBody EmployeeDto employeeDto){
-        EmployeeDto  savedEmployee1= employeeService.saveEmployee(employeeDto);
+        EmployeeDto  savedEmployee= employeeService.saveEmployee(employeeDto);
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
 
